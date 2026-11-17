@@ -18,3 +18,21 @@ Static GitHub Pages package. `index.html` is the existing V11 application, uncha
 - This application uses browser-side requests; ArcGIS Server must allow the deployed origin under its CORS and authentication policies. GitHub Pages hosting does not override SharePoint CSP or network access restrictions.
 - This package contains the existing V11 application and has not been live-tested against the private FibreconX service.
 - `.nojekyll` tells GitHub Pages to serve static files without Jekyll processing.
+
+## V12 update
+
+The page and application backgrounds are explicitly white, including when embedded in an iframe.
+
+## V13 changes
+- Replaced A structure Name and Z structure Name result columns with A Equipment Name and Z Equipment Name.
+- Values are read from Signal (30) fields `aequipmentname` and `zequipmentname`.
+- CSV export and result filtering updated accordingly.
+
+## V14 changes
+- Added **Comments** column after Z Port, populated from Signal layer 30 (`comments`, fallback `comment`).
+- Included Comments in search filtering and CSV export.
+- Confirm the Signal layer field name if comments remain blank.
+
+## OAuth application
+
+Configured ArcGIS Portal OAuth client App ID: `j61ihett8O71eFQI`. Register the GitHub Pages deployment URL as an allowed redirect URI in Portal.
